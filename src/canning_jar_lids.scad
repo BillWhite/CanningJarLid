@@ -1,3 +1,4 @@
+
 include <BOSL2/std.scad>
 include <BOSL2/threading.scad>
 include <config.scad>
@@ -41,12 +42,6 @@ module lid(inner_diameter=LID_INNER_DIAMETER,
             grip_diam=LID_GRIP_DIAMETER) {
     thread_len=2*pitch;
     inner_length=outer_length-WALL_WIDTH-thread_len;
-    echo("inner_diameter=", inner_diameter);
-    echo("outer_diameter=", outer_diameter);
-    echo("outer_length=", outer_length);
-    echo("thread_len=", thread_len);
-    echo("inner_length=", inner_length);
-    echo("WALL_WIDTH=", WALL_WIDTH);
     difference() {
         lid_outer(outer_diameter, outer_length, num_grips, grip_diam);
         union() {
