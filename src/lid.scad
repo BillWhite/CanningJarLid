@@ -1,5 +1,5 @@
 include <canning_jar_lids.scad>
 
-assembly() {
+assembly(debug=true) {
     lid();
 }
